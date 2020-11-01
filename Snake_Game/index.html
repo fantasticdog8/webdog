@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main_left">
+            <div class="main_left-top">
+                <h1>Snake Game</h1>
+                <p>Score:</p>
+                <h2>1</h2>
+            </div>
+            <div class="main_left-bottom">
+                <p>Select difficulty</p>
+                <select id="dificuilty" class="option" name="backdrop" onchange="difChange(this)">
+                    <option value="slow">Easy - slow</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="fast">Hard - fast</option>
+                </select>
+                <p>Select tail color</p>
+                <select id="color" class="option" name="backdrop" onchange="rectangleTail(this)">
+                    <option value="dark">Dark</option>
+                    <option value="olive" selected>Olive</option>
+                    <option value="brown">Brown</option>
+                    <option value="pink">Pink</option>
+                </select>
+                <p>Gameplay</p>
+                <p><Span>Choose your difficulty, tail color and press start button. Eat as many rats as possible, avoid eagles, and most important - have fun!</Span></p>
+                <button id="btn">Start</button>
+            </div>
+            <footer>
+                <p>created by Samuel Mikula</p>
+                <p>inspired by Yablko</p>
+            </footer>
+        </div>
+        <div class="main_right">
+            <canvas width="600" height="600"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
