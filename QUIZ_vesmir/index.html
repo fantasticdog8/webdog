@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="slovak" />
+    <meta name="author" content="Samuel Mikula" />
+    <meta
+      name="description"
+      content="Vesmirny minikviz vytvoreny v JavaScripte"
+    />
+    <meta name="keywords" content="Qviz, Vesmir, JavaScript" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Quiz Game</title>
+  </head>
+  <body>
+    <div class="title">
+      <h3>Vedecký minikvíz</h3>
+      <p>
+        Kvíz obsahuje 40 otázok a 10 faktov z oblasti vedy. Pri správnej
+        odpovedi sa hráč posunie na ďalšiu otázku, pri nesprávnej odpovedi o 2
+        otázky dozadu. Ak hráč správne uhádne 5 po sebe idúcich otázok -
+        vyhráva. Ak hráč padne na nulu alebo ak uplynie čas (15 sekúnd) -
+        prehráva.
+      </p>
+      <button class="start" id="starter" title="Spustit Hru">ŠTART</button>
+      <i class="fas fa-rocket"></i>
+    </div>
+
+    <main class="container">
+      <i class="fas fa-globe-europe"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-moon"></i>
+
+      <div class="top">
+        <h3 class="score" id="score">Otázka 1/5</h3>
+        <div class="progress-container">
+          <div class="progress" id="progress"></div>
+          <div class="circle active"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="time" id="time">15</div>
+      </div>
+
+      <div class="bottom">
+        <div class="question"></div>
+        <div class="answer">
+          <button id="ans1"></button>
+          <button id="ans2"></button>
+        </div>
+      </div>
+      <button class="again" id="again">Hrať znova</button>
+
+      <div class="best-time">
+        <p>Celkový čas: <span id="showTime">0</span>s</p>
+        <p>Najlepší čas: <span id="showBestTime">-</span>s</p>
+      </div>
+    </main>
+
+    <script type="module" src="JavaScript/script.js"></script>
+  </body>
+</html>
